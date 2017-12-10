@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+<manifest android:hardwareAccelerated="true" android:versionCode="1" android:versionName="1.0.0" package="com.skywish.rentingsm" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true" android:xlargeScreens="true" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="25" />
+    <application android:allowBackup="false" android:hardwareAccelerated="true" android:icon="@mipmap/icon" android:label="@string/app_name" android:largeHeap="true" android:name="com.yyuap.summer.application.YYSApplication" android:theme="@android:style/Theme.Holo.Light.NoActionBar" tools:replace="android:allowBackup">
+        <provider android:authorities="com.skywish.rentingsm.provider" android:exported="false" android:grantUriPermissions="true" android:name="com.yonyou.uap.um.provider.DSLSummerYLZHFileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/provider_paths" />
+        </provider>
+        <activity android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale" android:label="@string/app_name" android:launchMode="singleTop" android:name="com.yyuap.summer.StartSummerActivity" android:theme="@style/summer.Animations.NoTitleBar.FullScreen" android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter android:label="@string/app_name">
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:exported="false" android:name="com.yonyou.uap.um.control.UMTwoDCodeActivity" android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name="com.yonyou.uap.um.activity.XFileSelector" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name="com.yonyou.uap.um.activity.DrawLayoutActivity" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:label="@string/app_name" android:name="com.etop.sidcarddemo.EtPersionIdMainActivity" />
+        <service android:name="com.amap.api.location.APSService" />
+        <meta-data android:name="com.amap.api.v2.apikey" android:value="509c705cf6786d61f4a62913efb94029" />
+    </application>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature android:name="android.hardware.location.gps" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+</manifest>
